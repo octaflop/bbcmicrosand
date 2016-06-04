@@ -18,7 +18,7 @@ while True:
     was_pressed = is_pressed
     rec = radio.recv()
     if rec == rdo_ON:
-        display.show(Image("12345:67898:76543:21012:34567"))
+        display.show(Image("19999:91999:99199:99919:99991"))
     elif rec == rdo_OFF:
         display.clear()
     sleep(5)

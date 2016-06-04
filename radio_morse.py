@@ -88,7 +88,6 @@ started_to_wait = running_time()
 
 # Put the device in a loop to wait for and react to key presses.
 while True:
-    rec = radio.recv()
     # Work out how long the device has been waiting for a keypress.
     waiting = running_time() - started_to_wait
     # Reset the timestamp for the key_down_time.
@@ -104,6 +103,7 @@ while True:
             key_down_time = running_time()
     # Alternatively, if pin2 (input) is getting a signal, pretend it's a
     # button_a key press...
+    rec = radio.recv()
     while rec == rdo_ON:
         if not key_down_time:
             key_down_time = running_time()
